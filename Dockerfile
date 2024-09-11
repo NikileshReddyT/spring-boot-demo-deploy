@@ -1,5 +1,5 @@
-FROM maven:3.8.4-jdk-21 AS build
-COPY . .
+FROM jelastic/maven:3.9.5-openjdk-21 AS build
+COPY ..
 RUN mvn clean package -DskipTests
 
 FROM openjdk:21-jdk-slim 
